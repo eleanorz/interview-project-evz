@@ -7,16 +7,21 @@
 </head>
 <body>
     <header>
+        <span><img src="assets/images/taser-logo-white.png"></span>
+        <span>People</span>
+        <span>Departments</span>
+        <span>Offices</span>
     </header>
     <section class="top-section">
         <img src="assets/images/marketingteam.png">
     </section>
 
-
     <div class="bottom-section">
-        <div class="left-bottom-content">
-
-            <h1>Marketing and Communications</h1>  
+        <div title="Scroll down for parallax!" class="left-bottom-content">
+            <h1>Marketing and Communications</h1>
+            <p>
+                Sed tincidunt, leo nec consectetur aliquam, felis risus faucibus magna, et varius ante dolor et erat. Nam lacinia neque ac blandit egestas. Maecenas et arcu vulputate, pulvinar tellus at, tempor risus. Aenean imperdiet, sapien at lacinia aliquet, lacus lorem cursus metus, in rutrum nunc est eget quam. Morbi ac scelerisque nunc. Fusce finibus nulla vitae augue vulputate eleifend. Quisque eu suscipit ante. Sed et tempor justo, quis maximus velit.
+            </p>
             <h2>People</h2>
 
             <div class="employee-profile good-guy">
@@ -47,7 +52,6 @@
                     <h4>Front End Engineer</h4>
                 </div>
             </div>
-
         </div>
 
         <div class="right-bottom-content">
@@ -69,26 +73,15 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        //Action for li title colors changing
-        $( "span" ).hover(function() {
-            // console.log('mouseover');
-            // console.log(this);
-            // toogle active-job-title class so that text highlight behavior occurs
+        //change background colors of li for employee position title
+        $( "li > span" ).hover(function() {
             $(this).next().toggleClass( "active-job-title" );
         });
 
-        // $( document ).scroll(function() {
-        //     $(".bottom-section").animate({margin: "0px 0px 0px 0px"}, 3000);
-        //     // $( ".bottom-section" ).css( "margin-top", "inline" ).fadeOut( "slow" );
-        // });
         $(window).scroll(function(){
             var fromTop = $(window).scrollTop();
-            $(".bottom-section").css('margin', '-' + (100 - fromTop) + 'px 0px 0px 0px');
+            $(".bottom-section").css('margin', + (20 - 2*fromTop) + 'px 0px 0px 0px');
         });
-
-
-
-        //Action for displaying employee photos
     });
 </script>
 </body>

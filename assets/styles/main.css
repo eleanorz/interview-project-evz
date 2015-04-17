@@ -1,29 +1,66 @@
-/*navy color of header: #011942*/
-/*hover color of header spans: #011942*/
+html{
+	background-color: gray;
+}
 
 body{
     background-color: white;
     color: black;
-    width: 1200px;
+    width: 1100px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-	font-weight: 200!important;
 	font-family: arial;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 100!important;
+}
+
+header{
+	position: fixed;
+	vertical-align: middle;
+	display: table-cell;
+	z-index: 60;
+	color: white;
+	background-color: #011942;
+	height: 65px;
+	width: 1100px;
+}
+
+header > img{
+	display: inline;
+}
+
+header > span{
+	font-size: 22px;
+	display: table-cell;
+	vertical-align: middle;
+	border-radius: 7px;
+	padding: 10px;
+	font-weight: 100;
+	margin: 0px 20px;
+}
+
+header > span:hover{
+	background-color: #060F1E;
 }
 
 ul{
 	color: #0B60C6;
 	list-style-type: none;
 }
+
 li{
 	/*padding-bottom: 10px;*/
 	margin-top: 10px;
 }
+
 span{	
 	/*padding-top: 10px;*/
 }
-li:before {
+
+li:before{
 content: "";
 }
 
@@ -56,38 +93,39 @@ li > a{
 	border-top: solid #C1C1C1 18px;
 	background-color: white;
 	position: relative;
-	/*top: -80px;*/
 }
 
 .left-bottom-content{
 	display: inline;
-	width: 60%;
+	width: 630px;
+	padding: 8px;
 	float: left;
 }
 
 .right-bottom-content{
 	display: inline;
-	width: 30%;
+	width: 430px;
 	height: 800px;
+	padding: 10px;
 	float: right;
 	background-color: #F2F2F2;
 }
 
 .employee-profile{
-	width: 300px;
+	width: 44%;
 	display: inline;
 	float: left;
 }
 
 .employee-profile > img{
 	display: inline;
-	width: 50px;
+	width: 40%;
 }
 
 .employee-description{
 	display: inline;
 	float: right;
-	width: 180px;
+	width: 59%;
 }
 
 .good-guy{
