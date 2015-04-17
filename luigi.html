@@ -17,7 +17,7 @@
         <div class="left-bottom-content">
             <div class="left-side-luigi-bio">
                 <img src="assets/images/luigi-large.png">
-                <h4>Email Manager</h4>
+                <h4>Email</h4>
                 <h4>luigi@taser.com</h4>
                 <h4>Phone</h4>
                 <h4>555-555-1234</h4>
@@ -26,17 +26,16 @@
             </div>
             <div class="right-side-luigi-bio">
                 <h1>Luigi Mario</h1>
-                <h3>Front End Engineer | <a href>Marketing and Communications</a></h3>
+                <h3>Front End Engineer    |    <span class="name">Marketing and Communications</span></h3>
                 <p>
                     Sed tincidunt, leo nec consectetur aliquam, felis risus faucibus magna, et varius ante dolor et erat. Nam lacinia neque ac blandit egestas. Maecenas et arcu vulputate, pulvinar tellus at, tempor risus. Aenean imperdiet, sapien at lacinia aliquet, lacus lorem cursus metus, in rutrum nunc est eget quam. Morbi ac scelerisque nunc. Fusce finibus nulla vitae augue vulputate eleifend. Quisque eu suscipit ante. Sed et tempor justo, quis maximus velit.
                 </p>
-                <p>
-                    Mario Mario
-                    Direct Reports
-                    Waluigi Mario
-                    CMO
-                    Design Intern
-                </p>
+                    <h3>Manager</h3>
+                    <h4><span class="name">Mario Mario</span> CMO</h4>
+                    <img class="hover-img mario-thumbnail" src="assets/images/mario.png">
+                    <h3>Direct Reports</h3>
+                    <h4><span class="name">Waluigi Mario</span> Design Intern</h4>
+                    <img class="hover-img waluigi-thumbnail" src="assets/images/waluigi.png">
             </div>
 
         </div>
@@ -58,13 +57,18 @@
         </div>
     </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        //change background colors of li for employee position title
-        $( "li > span" ).hover(function() {
-            $(this).next().toggleClass( "active-job-title" );
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //change background colors of li for employee position title
+            $( "li > span" ).hover(function() {
+                $(this).next().toggleClass( "active-job-title" );
+            });
+
+            //display thumbnail images of mario and waluigi upon scrolling over the names
+            $('.right-side-luigi-bio > h4').hover(function() {
+                $(this).next().toggleClass( "show-image" );
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

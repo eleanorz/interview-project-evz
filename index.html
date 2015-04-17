@@ -73,18 +73,18 @@
         </div>
     </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        //change background colors of li for employee position title
-        $( "li > span" ).hover(function() {
-            $(this).next().toggleClass( "active-job-title" );
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //change background colors of li for employee position title
+            $( "li > span" ).hover(function() {
+                $(this).next().toggleClass( "active-job-title" );
+            });
+            //parallax logic for main section
+            $(window).scroll(function(){
+                var fromTop = $(window).scrollTop();
+                $(".bottom-section").css('margin', + (20 - 2*fromTop) + 'px 0px 0px 0px');
+            });
         });
-
-        $(window).scroll(function(){
-            var fromTop = $(window).scrollTop();
-            $(".bottom-section").css('margin', + (20 - 2*fromTop) + 'px 0px 0px 0px');
-        });
-    });
-</script>
+    </script>
 </body>
 </html>

@@ -52,14 +52,10 @@ ul{
 }
 
 li{
-	/*padding-bottom: 10px;*/
 	margin-top: 10px;
 }
 
-span{	
-	/*padding-top: 10px;*/
-}
-
+/*Gets rid of the ul bullet*/
 li:before{
 content: "";
 }
@@ -87,7 +83,6 @@ li > a{
 	margin-right: auto;
 }
 
-
 .bottom-section{
 	height: 2000px;
 	clear: both;
@@ -101,20 +96,50 @@ li > a{
 }
 
 .left-side-luigi-bio{
-	width: 35%;
-	margin: 30px;
+	width: 30%;
+	margin: 15px;
 	float: left;
 	display: inline;
 }
 .left-side-luigi-bio > img{
-	width: 95%;
+	width: 90%;
 	display: block;
 }
+
+.hover-img{
+	position: absolute;
+    left: 250px;
+    border:solid gray 7px;
+    width: 120px;
+    z-index: -1;
+}
+
+.show-image{
+    z-index: 2;
+}
+
+.mario-thumbnail{
+    top: 480px;
+}
+
+.waluigi-thumbnail{
+    top: 560px;
+}
+
+.left-side-luigi-bio > h4:nth-of-type(even){
+	color: #0B60C6;
+}
+
 .right-side-luigi-bio{
-	width: 63%;
+	width: 62%;
 	margin: 30px;
+	margin: 15px 15px 15px 0px;
 	float: right;
 	display: inline;
+}
+
+.name{
+	color: #0B60C6;
 }
 
 .left-bottom-content{
