@@ -6,12 +6,14 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
 </head>
 <body>
+    <header>
+    </header>
     <section class="top-section">
         <img src="assets/images/marketingteam.png">
     </section>
 
 
-    <section class="bottom-section">
+    <div class="bottom-section">
         <div class="left-bottom-content">
 
             <h1>Marketing and Communications</h1>  
@@ -51,28 +53,40 @@
         <div class="right-bottom-content">
             <h2>Marketing and Communications</h2>
             <ul>
-                <li>Mario Mario <span>CMO</span>
+                <li><span>Mario Mario</span> <a>CMO</a>
                     <ul>
-                        <li>Luigi Mario <span>Front End Engineer</span>
+                        <li><span>Luigi Mario</span> <a>Front End Engineer</a>
                             <ul>
-                                <li>Waluigi Mario <span>Design Intern</span></li>
+                                <li><span>Waluigi Mario</span> <a>Design Intern</a></li>
                             </ul>
                         </li>
-                        <li>Wario Mario <span>Front End Engineer</span></li>
+                        <li><span>Wario Mario</span> <a>Front End Engineer</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-    </section>
+    </div>
 
 <script type="text/javascript">
     $(document).ready(function(){
         //Action for li title colors changing
-        $( "li" ).mouseover(function() {
-            console.log('mouseover');
-            console.log(this);
-            $(this).css( "background-color", "red");
+        $( "span" ).hover(function() {
+            // console.log('mouseover');
+            // console.log(this);
+            // toogle active-job-title class so that text highlight behavior occurs
+            $(this).next().toggleClass( "active-job-title" );
         });
+
+        // $( document ).scroll(function() {
+        //     $(".bottom-section").animate({margin: "0px 0px 0px 0px"}, 3000);
+        //     // $( ".bottom-section" ).css( "margin-top", "inline" ).fadeOut( "slow" );
+        // });
+        $(window).scroll(function(){
+            var fromTop = $(window).scrollTop();
+            $(".bottom-section").css('margin', '-' + (100 - fromTop) + 'px 0px 0px 0px');
+        });
+
+
 
         //Action for displaying employee photos
     });
