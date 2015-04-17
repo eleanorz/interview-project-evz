@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taser</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+</head>
+<body>
+    <header>
+        <span><a href="index.html"><img src="assets/images/taser-logo-white.png"></a></span>
+        <span>People</span>
+        <span>Departments</span>
+        <span>Offices</span>
+    </header>
+
+    <div class="bottom-section luigi-bio">
+        <div class="left-bottom-content">
+            <div class="left-side-luigi-bio">
+                <img src="assets/images/luigi-large.png">
+                <h4>Email Manager</h4>
+                <h4>luigi@taser.com</h4>
+                <h4>Phone</h4>
+                <h4>555-555-1234</h4>
+                <h4>Office</h4>
+                <h4>Seattle</h4>
+            </div>
+            <div class="right-side-luigi-bio">
+                <h1>Luigi Mario</h1>
+                <h3>Front End Engineer | <a href>Marketing and Communications</a></h3>
+                <p>
+                    Sed tincidunt, leo nec consectetur aliquam, felis risus faucibus magna, et varius ante dolor et erat. Nam lacinia neque ac blandit egestas. Maecenas et arcu vulputate, pulvinar tellus at, tempor risus. Aenean imperdiet, sapien at lacinia aliquet, lacus lorem cursus metus, in rutrum nunc est eget quam. Morbi ac scelerisque nunc. Fusce finibus nulla vitae augue vulputate eleifend. Quisque eu suscipit ante. Sed et tempor justo, quis maximus velit.
+                </p>
+                <p>
+                    Mario Mario
+                    Direct Reports
+                    Waluigi Mario
+                    CMO
+                    Design Intern
+                </p>
+            </div>
+
+        </div>
+
+        <div class="right-bottom-content">
+            <h2>Marketing and Communications</h2>
+            <ul>
+                <li><span>Mario Mario</span> <a>CMO</a>
+                    <ul>
+                        <li><span>Luigi Mario</span> <a>Front End Engineer</a>
+                            <ul>
+                                <li><span>Waluigi Mario</span> <a>Design Intern</a></li>
+                            </ul>
+                        </li>
+                        <li><span>Wario Mario</span> <a>Front End Engineer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //change background colors of li for employee position title
+        $( "li > span" ).hover(function() {
+            $(this).next().toggleClass( "active-job-title" );
+        });
+    });
+</script>
+</body>
+</html>
